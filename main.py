@@ -8,8 +8,9 @@ import os
 from dotenv import load_dotenv
 import sqlite3
 from htmlTemplates import css, user_template, bot_template
- 
+from typing import Union
 
+load_dotenv()
 def create_users_db():
     conn = sqlite3.connect('MASTER.db')
     cursor = conn.cursor()
@@ -129,8 +130,8 @@ def main():
     init_ses_states()
     st.title("Stock Price AI Bot")
     st.caption("Visualizations and OpenAI Chatbot for Multiple Stocks Over A Specified Period")
-
-
+    openai_api_key: Union[str, None] = os.getenv("OPENAI_API_KEY")
+    print("Valor de openai_api_key:", openai_api_key)
     with st.sidebar:
         user_authentication_tab()
     
@@ -199,5 +200,4 @@ def main():
 
 
 if __name__ == '__main__':
-    load_dotenv()
     main()
