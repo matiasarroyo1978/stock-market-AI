@@ -139,7 +139,7 @@ def main():
     if st.session_state.user_authenticated:
         with st.sidebar:
             with st.expander("Settings",expanded=True):
-                asset_tickers = sorted(['DOW','NVDA','TSL','GOOGL','AMZN','AI','NIO','LCID','F','LYFY','AAPL', 'MSFT', 'BTC-USD', 'ETH-USD'])
+                asset_tickers = sorted(['DOW','NVDA','TSL','BRK-B','GOOGL','AMZN','AI','NIO','LCID','F','LYFY','AAPL', 'MSFT', 'BTC-USD', 'ETH-USD'])
                 asset_dropdown = st.multiselect('Pick Assets:', asset_tickers)
 
                 metric_tickers = ['Adj. Close', 'Relative Returns']
