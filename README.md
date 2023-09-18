@@ -25,5 +25,5 @@ Using Sqlite3, implemented user login/authentiation system
 ## Screenshot
 -------------
 
-![screenshot].(./stock.png)
+![](./stock.png)
 
